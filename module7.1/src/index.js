@@ -1,15 +1,16 @@
 function objectProps(obj) {
-    if(obj.hasOwnProperty()) {
-        console.log(obj)
+    for (let prop in obj) {
+        if(obj.hasOwnProperty(prop)) {
+            console.log(prop, obj[prop])
+        }
     }
-    return obj
 }
 
 const testObj = {
     a: 1,
     b: 2,
-    c: 3,
+    c: 3
 }
 
-console.log(objectProps(testObj));
+objectProps(testObj)
 
